@@ -7,6 +7,7 @@ import ProductComponent from './ProductComponent';
 const ProductListing = () => {
     const products = useSelector((state) => state);
     const dispatch = useDispatch();
+    console.log(products);
 
     const fetchProducts = async () => {
         const response = await axios
