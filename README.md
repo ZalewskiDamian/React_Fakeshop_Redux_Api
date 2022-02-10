@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+<a href="https://zalewskidamian.github.io/React_Fakeshop_Redux_Api/">Click to see demo</a>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
