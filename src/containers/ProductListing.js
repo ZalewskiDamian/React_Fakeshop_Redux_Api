@@ -7,11 +7,12 @@ import ProductComponent from './ProductComponent';
 const ProductListing = () => {
     const products = useSelector((state) => state);
     const dispatch = useDispatch();
-    console.log(products);
 
     const fetchProducts = async () => {
         const response = await axios
-            .get("https://fakestoreapi.com/products")
+            .get("https://fakestoreapi.com/products", {
+                headers: {'Content-Type': 'application/json'}
+            })
             .catch((err) => { 
                 console.log("Err", err);
             });
@@ -21,8 +22,7 @@ const ProductListing = () => {
     useEffect(() => {
         fetchProducts();
     }, []);
-
-    console.log("Products:", products);
+    
     return (
         <div className='ui grid container'>
             <ProductComponent />
